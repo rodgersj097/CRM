@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="987.0" text="CRM" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mainViewController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="555.0" prefWidth="832.0">
+         <children>
+            <HBox layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="631.0" prefWidth="994.0" AnchorPane.bottomAnchor="4.2000000000000455" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.200000000000045" AnchorPane.topAnchor="4.0">
+               <children>
+                  <VBox prefHeight="612.0" prefWidth="211.0">
+                     <children>
+                        <Accordion prefHeight="407.0" prefWidth="211.0">
+                          <panes>
+                            <TitledPane animated="false" maxHeight="-Infinity" prefHeight="382.0" prefWidth="211.0" text="untitled 1">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="untitled 2">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="untitled 3">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Button fx:id="addDocumentButton" layoutX="224.0" layoutY="1.0" mnemonicParsing="false" onAction="#createDocumentButtonPushed" text="+" />
+         </children></AnchorPane>
+  </content>
+</TitledPane>
