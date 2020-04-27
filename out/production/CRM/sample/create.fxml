@@ -11,9 +11,9 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.createController">
    <children>
       <Label layoutX="95.0" layoutY="62.0" text="Name of new document" />
-      <TextField fx:id="nameTextField" layoutX="506.0" layoutY="58.0" />
+      <TextField fx:id="docNameTextField" layoutX="506.0" layoutY="58.0" />
       <ComboBox fx:id="fieldTypeComboBox" layoutX="84.0" layoutY="142.0" prefHeight="25.0" prefWidth="177.0" promptText="Select new FIeld Type" />
-      <Button fx:id="addFieldButton" layoutX="467.0" layoutY="142.0" mnemonicParsing="false" onAction="#addFieldButtonPushed" text="Add" />
+      <Button fx:id="addFieldButton" layoutX="467.0" layoutY="142.0" mnemonicParsing="false" text="Add" />
       <TableView fx:id="fieldTypeTableView" layoutX="84.0" layoutY="208.0" prefHeight="306.0" prefWidth="713.0">
         <columns>
           <TableColumn fx:id="fieldType" prefWidth="75.0" text="FieldType" />
@@ -23,8 +23,9 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <TextField layoutX="300.0" layoutY="142.0" promptText="Name new field" />
-      <Button fx:id="createDocumentButton" layoutX="629.0" layoutY="530.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Create Document" />
-      <Button layoutX="84.0" layoutY="530.0" mnemonicParsing="false" onAction="#cancelButtonPushed" text="Cancel" />
+      <TextField fx:id="nameTextField" layoutX="300.0" layoutY="142.0" promptText="Name new field" />
+      <Button fx:id="createDocumentButton" layoutX="629.0" layoutY="543.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Create Document" />
+      <Button fx:id="cancelButton" layoutX="84.0" layoutY="530.0" mnemonicParsing="false" text="Cancel" />
+      <Button fx:id="deleteFieldButton" layoutX="739.0" layoutY="183.0" mnemonicParsing="false" text="Delete" />
    </children>
 </AnchorPane>

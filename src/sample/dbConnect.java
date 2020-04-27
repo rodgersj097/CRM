@@ -6,7 +6,7 @@ import javax.swing.text.html.parser.Entity;
 import java.sql.*;
 
 public class dbConnect {
-    private static String user = "Root";
+    private static String user = "root";
     private static String pass = "";
 
     public static Integer insertFields(Fields newField) throws SQLException {
@@ -17,13 +17,13 @@ public class dbConnect {
         try {
 
             //1. Connect to database
-            conn = DriverManager.getConnection("jdbc:mysql//localhost:3306/crm");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/crm", user , pass);
 
             //2.Create a sql statement
             String sql = "INSERT INTO fields(name, fieldType) values (?,?)";
 
             //3. create PreparedStatment
-            ps = conn.prepareStatement(sql);
+            ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             //4. Bind parameters
             ps.setString(1, newField.getName());
@@ -31,6 +31,7 @@ public class dbConnect {
 
             //5. execute instert statemnt
              ps.executeUpdate();
+
 
              //get auto generated id from insesrt
             rs = ps.getGeneratedKeys();
@@ -45,7 +46,7 @@ public class dbConnect {
         return lastInsertedId;
     }
 
-    public static int insertEntity(Entity newEntity) throws SQLException {
+    public static int insertEntity(EntityCreator newEntity) throws SQLException {
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -53,13 +54,13 @@ public class dbConnect {
         try {
 
             //1. Connect to database
-            conn = DriverManager.getConnection("jdbc:mysql//localhost:3306/crm");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/crm", user , pass);
 
             //2.Create a sql statement
-            String sql = "INSERT INTO entity(name) values (?)";
+            String sql = "INSERT INTO entitys(name) values (?)";
 
             //3. create PreparedStatment
-            ps = conn.prepareStatement(sql);
+            ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             //4. Bind parameters
             ps.setString(1, newEntity.getName());
@@ -87,7 +88,7 @@ public class dbConnect {
         try {
 
             //1. Connect to database
-            conn = DriverManager.getConnection("jdbc:mysql//localhost:3306/crm");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/crm", user ,""  );
 
             //2.Create a sql statement
             String sql = "INSERT INTO Entity_fields(fieldId, EntityId) values (?,?)";

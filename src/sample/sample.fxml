@@ -38,7 +38,7 @@
                   </VBox>
                </children>
             </HBox>
-            <Button fx:id="addDocumentButton" layoutX="224.0" layoutY="1.0" mnemonicParsing="false" onAction="#createDocumentButtonPushed" text="+" />
+            <Button fx:id="addDocumentButton" layoutX="224.0" layoutY="1.0" mnemonicParsing="false" text="+" />
          </children></AnchorPane>
   </content>
 </TitledPane>

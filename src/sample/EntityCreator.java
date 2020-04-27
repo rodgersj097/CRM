@@ -8,10 +8,14 @@ public class EntityCreator
     private  String name;
     private ArrayList<Fields> fields;
 
-    public EntityCreator(Integer id, String name, ArrayList<Fields> fields) {
+    public EntityCreator( String name) {
+        setName(name);
+    }
+
+    public EntityCreator(Integer id, String name){
         setId(id);
         setName(name);
-        setFields(fields);
+
     }
 
     public Integer getId() {
@@ -19,10 +23,7 @@ public class EntityCreator
     }
 
     public void setId(Integer id) {
-        if(id > 0)
-        {
-            this.id = id;
-        }
+        this.id = id;
     }
 
     public String getName() {
@@ -37,11 +38,4 @@ public class EntityCreator
         }
     }
 
-    public ArrayList<Fields> getFields() {
-        return fields;
-    }
-    //TODO set validation
-    public void setFields(ArrayList<Fields> fields) {
-        this.fields = fields;
-    }
 }

@@ -6,9 +6,21 @@ public class Fields
     private String name, fieldType;
 
     public Fields( String name, String fieldType) {
-
         setName(name);
         setFieldType(fieldType);
+    }
+    public Fields( Integer id, String name, String fieldType) {
+        setId(id);
+        setName(name);
+        setFieldType(fieldType);
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
