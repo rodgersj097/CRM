@@ -9,8 +9,10 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import javax.swing.*;
+import javax.swing.text.html.parser.Entity;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Array;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +49,9 @@ public class createController implements Initializable {
     @FXML
     private TextField docNameTextField;
 
-    private List<Fields> listOfFields = new ArrayList<Fields>();
+    private ArrayList<Integer> listofFieldIds = new ArrayList<>();
+
+    private ArrayList<Fields> listOfFields = new ArrayList<Fields>();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //Setup Combo box
@@ -61,8 +65,6 @@ public class createController implements Initializable {
         //setup table columns
         fieldType.setCellValueFactory(new PropertyValueFactory<Fields, String>("FieldType"));
         name.setCellValueFactory(new PropertyValueFactory<Fields, String>("name"));
-
-
 
         //addFieldButtonPushed
         addFieldButton.setOnAction(e->{
@@ -91,40 +93,17 @@ public class createController implements Initializable {
 
         //createDocumentPushed
         createDocumentButton.setOnAction(e->{
-            Integer entityId = 0;
-            //Loop through and save all fields to database
-            List<Integer> listOfFieldIds = new ArrayList<Integer>();
-            listOfFields.forEach(field->{
-                try {
-                    int fieldId = dbConnect.insertFields(field);
-                    listOfFieldIds.add(fieldId);
-                } catch (SQLException ex) {
-                    ex.printStackTrace();
-                }
+           listOfFields.forEach(field->{
+               try {
+                   listofFieldIds.add(dbConnect.insertFields(field));
+               } catch (SQLException ex) {
+                   ex.printStackTrace();
+               }
+           });
+            //loop through ids and create templates
+            listofFieldIds.forEach(id->{
+                dbConnect.insertDocTemp(id,docNameTextField.getText());
             });
-
-            //crete and save entity
-            EntityCreator newEntity = new EntityCreator(docNameTextField.getText());
-            try {
-                 entityId = dbConnect.insertEntity(newEntity);
-            } catch (SQLException ex) {
-
-                ex.printStackTrace();
-            }
-
-            //create entity_field
-
-            Integer finalEntityId = entityId;
-            listOfFieldIds.forEach(id ->{
-                System.out.print(finalEntityId);
-                dbConnect.insertEntity_Fields(id, finalEntityId);
-            });
-
         });
     }
-
-
-
-
-
 }

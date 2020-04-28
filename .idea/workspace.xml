@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/mysql-connector-java-8.0.20.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mssql_jdbc_8_2_2_jre13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mssql_jdbc_8_2_2_jre13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Database Insert in progress">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jaxb_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jaxb_jxc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jaxb_runtime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jaxb_xjc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/documentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/documentTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/jaxb-api.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/jaxb-jxc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/serializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CRM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CRM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/EntityCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CRM/sample/EntityCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/Fields.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CRM/sample/Fields.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/EntityCreator.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/create.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CRM/sample/create.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/createController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CRM/sample/createController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/dbConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CRM/sample/dbConnect.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/mainViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CRM/sample/mainViewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/mssql-jdbc-8.2.2.jre13.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CRM/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/EntityCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/EntityCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Fields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Fields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/EntityCreator.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/create.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/create.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/createController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/createController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/dbConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/dbConnect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/mainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/mainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/mssql-jdbc-8.2.2.jre13.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,6 +79,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="FxmlFile" />
         <option value="Class" />
       </list>
@@ -98,6 +100,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -105,8 +108,14 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15332031" />
@@ -114,6 +123,12 @@
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="sample" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\black\IdeaProjects\CRM\src\sample" />
     </key>
@@ -130,7 +145,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -171,6 +186,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EntityCreatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CRM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sample" />
+      <option name="MAIN_CLASS_NAME" value="sample.EntityCreatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -202,6 +236,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.EntityCreatorTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -225,7 +264,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -234,5 +275,7 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <MESSAGE value="Database Insert in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Database Insert in progress" />
   </component>
 </project>

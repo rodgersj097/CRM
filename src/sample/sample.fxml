@@ -1,44 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="987.0" text="CRM" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mainViewController">
-  <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="555.0" prefWidth="832.0">
-         <children>
-            <HBox layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="631.0" prefWidth="994.0" AnchorPane.bottomAnchor="4.2000000000000455" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.200000000000045" AnchorPane.topAnchor="4.0">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="833.0" prefWidth="1151.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mainViewController">
+    <children>
+        <VBox prefHeight="833.0" prefWidth="293.0" style="-fx-background-color: #292e36;">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="115.0" prefWidth="304.0" style="-fx-background-color: #548be3;" text="CRM name here lololol">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Label>
+                <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="293.0">
                <children>
-                  <VBox prefHeight="612.0" prefWidth="211.0">
-                     <children>
-                        <Accordion prefHeight="407.0" prefWidth="211.0">
-                          <panes>
-                            <TitledPane animated="false" maxHeight="-Infinity" prefHeight="382.0" prefWidth="211.0" text="untitled 1">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                              </content>
-                            </TitledPane>
-                            <TitledPane animated="false" text="untitled 2">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                              </content>
-                            </TitledPane>
-                            <TitledPane animated="false" text="untitled 3">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                              </content>
-                            </TitledPane>
-                          </panes>
-                        </Accordion>
-                     </children>
-                  </VBox>
+                  <TextField prefHeight="26.0" prefWidth="273.0" promptText="Search" />
                </children>
-            </HBox>
-            <Button fx:id="addDocumentButton" layoutX="224.0" layoutY="1.0" mnemonicParsing="false" text="+" />
-         </children></AnchorPane>
-  </content>
-</TitledPane>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+                </HBox>
+                <Accordion fx:id="docAccordion" prefHeight="478.0" prefWidth="293.0" style="-fx-background-color: #292e36;" />
+                <HBox prefHeight="154.0" prefWidth="293.0">
+               <children>
+                  <Button fx:id="addDocumentButton" mnemonicParsing="false" text="Create new Document template" />
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox layoutX="291.0" prefHeight="833.0" prefWidth="860.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="135.0" prefWidth="860.0">
+                    <children>
+                        <Label fx:id="documentName" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="220.0" text="Label">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
