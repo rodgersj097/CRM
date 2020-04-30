@@ -95,15 +95,33 @@ public class createController implements Initializable {
         createDocumentButton.setOnAction(e->{
            listOfFields.forEach(field->{
                try {
+                   //return id from SQL database to use in next insert
                    listofFieldIds.add(dbConnect.insertFields(field));
                } catch (SQLException ex) {
                    ex.printStackTrace();
                }
            });
-            //loop through ids and create templates
-            listofFieldIds.forEach(id->{
-                dbConnect.insertDocTemp(id,docNameTextField.getText());
-            });
+           try {
+               //loop through ids and create templates
+               listofFieldIds.forEach(id -> {
+                   dbConnect.insertDocTemp(id, docNameTextField.getText());
+               });
+
+               Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+               DialogPane dp = alert.getDialogPane();
+               alert.setTitle("Document Created Succefully");
+
+               alert.setContentText("The template " + docNameTextField.getText() + " has been succesfully created");
+               alert.showAndWait();
+               if(alert.getResult() == ButtonType.OK) {
+                  sceneChanger.changeScenes(e, "sample","bv");
+               }
+           } catch (Exception error)  {
+                messageDisplayer.displayErrorMessage(error.getMessage(), "There was an error when creating the document Template");
+           }
+
+
+
         });
     }
 }

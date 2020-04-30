@@ -5,10 +5,8 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.*;
 
-public class documentController  {
+public class documentTemplateController {
     private static TreeMap<String , LinkedList<Fields>> documentTreeMap = new TreeMap<>();
-
-
 
     public static void createDocTemplates(String docName , Fields field){
         System.out.println("Adding docs to treemap ");
@@ -20,8 +18,16 @@ public class documentController  {
         }
     }
 
+    public static List<Fields> getTemplatesFromKeys(String key){
+        List<Fields> templates =  new ArrayList();
+        for(Map.Entry m : documentTreeMap.entrySet()){
+            if(m.getKey().equals(key)){
+                templates.addAll((Collection) m.getValue());
+            }
+        }
+        return templates;
+    }
     public static Set<String>  getKeys(){
-        System.out.println("Returning keyset");
         return documentTreeMap.keySet();
     }
 
@@ -30,6 +36,8 @@ public class documentController  {
             System.out.println("Key: " + entry.getKey().toString() + ". Value: " + entry.getValue().toString());
         }
     }
+
+
 
 
 }

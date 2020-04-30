@@ -1,9 +1,14 @@
 package sample;
 
+
+import javafx.scene.Node;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+
 public class Fields
 {
-    private Integer id;
-    private String name, fieldType;
+    private Integer id, fId;
+    private String name, fieldType, value;
 
     public Fields( String name, String fieldType) {
         setName(name);
@@ -15,12 +20,33 @@ public class Fields
         setFieldType(fieldType);
     }
 
+    public Fields( Integer fId, String name, String fieldType, String value) {
+        setfId(fId);
+        setName(name);
+        setFieldType(fieldType);
+        setValue(value);
+    }
+
     public Integer getId() {
         return id;
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        if(id > 0) {
+            this.id = id;
+        }else {
+            throw new IllegalArgumentException("id cannot be less than 0");
+        }
+    }
+
+    public Integer getfId() {
+        return fId;
+    }
+
+    public void setfId(Integer fId) {
+        if(fId > 0) {
+            this.fId = fId;
+        }
     }
 
     public String getName() {
@@ -28,7 +54,11 @@ public class Fields
     }
 
     public void setName(String name) {
-        this.name = name;
+        if(!name.isEmpty()) {
+            this.name = name;
+        }else {
+            throw new IllegalArgumentException("Field Name cannot be emtpy");
+        }
     }
 
     public String getFieldType() {
@@ -36,6 +66,45 @@ public class Fields
     }
 
     public void setFieldType(String fieldType) {
-        this.fieldType = fieldType;
+        if(!fieldType.isEmpty()) {
+            this.fieldType = fieldType;
+        }else {
+            throw new IllegalArgumentException("fieldType cannot be empty");
+
+        }
     }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        if(!value.isEmpty()) {
+            this.value = value;
+        } else {
+            throw new IllegalArgumentException("Value cannot be empty");
+        }
+    }
+
+    public TextField createFXTextField(Fields field) {
+        TextField textField = new TextField();
+        if (field.getFieldType() == "TextField") {
+            textField.setId(field.getId().toString());
+            textField.setPromptText(field.getName());
+            textField.setFocusTraversable(false);
+        }
+        return textField;
+    }
+
+    public TextArea createFXTextArea(Fields field){
+        TextArea textArea = new TextArea();
+        if (field.getFieldType() == "TextField") {
+
+            textArea.setPromptText(field.getName());
+            textArea.setFocusTraversable(false);
+        }
+        return textArea;
+    }
+
+
 }

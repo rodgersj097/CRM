@@ -7,11 +7,9 @@ public class documentTemplate {
     String docName;
     Fields[] field;
 
-    public documentTemplate(String DocName, List<Fields> field) {
+    public documentTemplate(String docName, List<Fields> field) {
         setDocName(docName);
         setField(field);
-
-
     }
 
     public String getDocName() {
@@ -19,7 +17,12 @@ public class documentTemplate {
     }
 
     public void setDocName(String docName) {
-        this.docName = docName;
+        if(!docName.isEmpty()) {
+            this.docName = docName;
+        }else {
+            throw new IllegalArgumentException("Document Name cannot be empty");
+
+        }
     }
 
     public Fields[] getField() {
@@ -27,6 +30,10 @@ public class documentTemplate {
     }
 
     public void setField(List< Fields > field) {
-        this.field = field.toArray(new Fields[0]);
+        if (field.size() > 0) {
+            this.field = field.toArray(new Fields[0]);
+        } else {
+            throw new IllegalArgumentException("There must be a field in the array ");
+        }
     }
 }
