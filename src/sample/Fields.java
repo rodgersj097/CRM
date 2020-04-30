@@ -89,9 +89,10 @@ public class Fields
     public TextField createFXTextField(Fields field) {
         TextField textField = new TextField();
         if (field.getFieldType() == "TextField") {
+            textField.setFocusTraversable(false);
             textField.setId(field.getId().toString());
             textField.setPromptText(field.getName());
-            textField.setFocusTraversable(false);
+            textField.setStyle("-fx-prompt-text-fill: derive(-fx-control-inner-background,-30%); }");
         }
         return textField;
     }
@@ -99,9 +100,9 @@ public class Fields
     public TextArea createFXTextArea(Fields field){
         TextArea textArea = new TextArea();
         if (field.getFieldType() == "TextField") {
-
-            textArea.setPromptText(field.getName());
             textArea.setFocusTraversable(false);
+            textArea.setPromptText(field.getName());
+
         }
         return textArea;
     }

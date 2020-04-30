@@ -59,10 +59,13 @@ public class mainViewController implements Initializable {
         });
         rootItem.getChildren().addAll(docs);
         docTreeView.setRoot(rootItem);
+        rootItem.setExpanded(true);
 
-        documentTemplateController.printTree();
+        /*documentTemplateController.printTree();
         existingDocumentController.printTree();
         printTree();
+        */
+
         addDocumentButton.setOnAction(e->{
             try {
                 sceneChanger.changeScenes(e, "create.fxml", "Create a new Document");
@@ -72,18 +75,26 @@ public class mainViewController implements Initializable {
         });
 
         createNewDocButton.setOnAction(e->{
+            fieldListVBOX.getChildren().clear();
             TreeItem selectedItem = (TreeItem) docTreeView.getSelectionModel().getSelectedItem();
             System.out.println(selectedItem.getValue().toString());
            List<Fields> listOfTemplateFields =  documentTemplateController.getTemplatesFromKeys(selectedItem.getValue().toString());
+           documentName.setText(selectedItem.getValue() + " Template");
            for(Fields f : listOfTemplateFields){
-                System.out.println(f.getFieldType());
-               if(f.getFieldType() == "InputField"){
-                   TextField newField = f.createFXTextField(f);
-                   fieldListVBOX.getChildren().setAll(newField);
-               }else{
-
-                   System.out.println("Shits fucked yo");
-               }
+                System.out.println(f.getFieldType() + "d");
+                if(f.getFieldType().equals("InputField")) {
+                    Label newLabel = new Label();
+                    newLabel.setText(f.getName());
+                    TextField newField = f.createFXTextField(f);
+                    fieldListVBOX.getChildren().add(newLabel);
+                    fieldListVBOX.getChildren().add(newField);
+                } else if(f.getFieldType().equals("InputArea")) {
+                    Label newLabel = new Label();
+                    newLabel.setText(f.getName());
+                    TextArea newField = f.createFXTextArea(f);
+                    fieldListVBOX.getChildren().add(newLabel);
+                    fieldListVBOX.getChildren().add(newField);
+                }
            }
         });
 
