@@ -33,12 +33,17 @@
             <TreeView fx:id="docTreeView" prefHeight="402.0" prefWidth="293.0" />
             <VBox>
                <children>
-                  <Button fx:id="addDocumentButton" mnemonicParsing="false" text="Create new Document template">
+                  <Button fx:id="addDocumentButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="203.0" text="Create new Document template">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
                   <Button fx:id="createNewDocButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="203.0" text="Create New Document">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="deleteButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="32.0" prefWidth="203.0" text="Delete">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>

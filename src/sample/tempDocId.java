@@ -1,13 +1,22 @@
 package sample;
 
 public class tempDocId {
-    Integer tempdocId;
+    Integer tempdocId, existingDocId;
     String existingdocName, tempDocName;
 
-    public tempDocId(Integer tempdocId, String existingdocName, String tempDocName) {
+    public tempDocId(Integer tempdocId, Integer existingDocId, String existingdocName, String tempDocName) {
         this.tempdocId = tempdocId;
+        this.existingDocId = existingDocId;
         this.existingdocName = existingdocName;
         this.tempDocName = tempDocName;
+    }
+
+    public Integer getExistingDocId() {
+        return existingDocId;
+    }
+
+    public void setExistingDocId(Integer existingDocId) {
+        this.existingDocId = existingDocId;
     }
 
     public Integer getTempdocId() {

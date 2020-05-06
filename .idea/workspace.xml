@@ -2,15 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Database Insert in progress">
-      <change afterPath="$PROJECT_DIR$/src/sample/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/Fields.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CRM/sample/Fields.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/dbConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CRM/sample/dbConnect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/documentTemplate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/documentTemplateController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/existingDocument.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/existingDocumentController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/mainViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CRM/sample/mainViewController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CRM/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Fields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Fields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CRM/sample/tempDocId.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CRM/sample/tempDocId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/CRM/sample/documentTemplateTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/dbConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/dbConnect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/documentTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/documentTemplateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/existingDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/document.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/existingDocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/documentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/mainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/mainViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/tempDocId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/tempDocId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/sample/documentTemplateTest.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
